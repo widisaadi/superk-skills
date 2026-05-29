@@ -5,7 +5,7 @@
 - **[Superpowers](https://github.com/obra/superpowers)** — A complete software development workflow (brainstorming → planning → TDD → execution → debugging → verification → code review)
 - **[Andrej Karpathy Skills](https://github.com/multica-ai/andrej-karpathy-skills)** — Behavioral guidelines to reduce common LLM coding mistakes (assumptions, simplicity, surgical changes, goal-driven execution)
 
-I really love these skills, which is why I didn't just bundle them — I **fused** them. Karpathy's discipline is injected into every step of the Superpowers workflow, plus 5 new "mutant" skills fill the gaps neither project addresses alone.
+**I really love these skills, which is why I didn't just bundle them** — **I **fused** them**. Karpathy's discipline is injected into every step of the Superpowers workflow, plus 5 new "mutant" skills fill the gaps neither project addresses alone.
 
 ---
 
