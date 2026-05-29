@@ -68,10 +68,12 @@ npx degit widisaadi/superk-skills ./skills
 
 ## 💡 How to Use
 
+**Option 1: Explicit Mention**
 Just mention **superk** in your prompt. The agent will automatically utilize the combined methodology.
-
-For example:
 > "Agent, use **superk** to build this feature."
+
+**Option 2: Auto-Run (Recommended)**
+By default, this repository includes a `CLAUDE.md` and `AGENT.md` file at the root. If you are using Claude Code, Cursor, or Gemini Antigravity, the agent will **automatically read these files** and invoke `superk-core` on every task without you needing to mention it.
 
 The Karpathy Checkpoint runs before every action:
 
