@@ -9,7 +9,16 @@ Execute plan by dispatching fresh subagent per task, with two-stage review after
 
 **Why subagents:** You delegate tasks to specialized agents with isolated context. By precisely crafting their instructions and context, you ensure they stay focused and succeed at their task. They should never inherit your session's context or history — you construct exactly what they need. This also preserves your own context for coordination work.
 
-**Core principle:** Fresh subagent per task + two-stage review (spec then quality) = high quality, fast iteration
+**Core principle:** Fresh subagent per task + two-stage review (spec then quality) + Karpathy discipline = high quality, fast iteration
+
+**SuperK Karpathy Integration:** Every implementer subagent receives the Karpathy Checkpoint as part of their context:
+```
+Before writing ANY code:
+1. ASSUMPTIONS — State what you're assuming. If uncertain, ask.
+2. SIMPLICITY — Write minimum code. No speculative features.
+3. SCOPE — Touch only files in the task spec. Nothing extra.
+4. CRITERIA — Define verifiable success. Loop until verified.
+```
 
 **Continuous execution:** Do not pause to check in with your human partner between tasks. Execute all tasks from the plan without stopping. The only reasons to stop are: BLOCKED status you cannot resolve, ambiguity that genuinely prevents progress, or all tasks complete. "Should I continue?" prompts and progress summaries waste their time — they asked you to execute the plan, so execute it.
 
@@ -248,6 +257,8 @@ Done!
 - Let implementer self-review replace actual review (both are needed)
 - **Start code quality review before spec compliance is ✅** (wrong order)
 - Move to next task while either review has open issues
+- **Let implementer add features not in the task spec** (SuperK: Karpathy Rule 3 — scope creep)
+- **Accept >2x estimated line count without justification** (SuperK: complexity-guard)
 
 **If subagent asks questions:**
 - Answer clearly and completely

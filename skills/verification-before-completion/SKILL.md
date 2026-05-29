@@ -48,6 +48,8 @@ Skip any step = lying, not verifying
 | Regression test works | Red-green cycle verified | Test passes once |
 | Agent completed | VCS diff shows changes | Agent reports "success" |
 | Requirements met | Line-by-line checklist | Tests passing |
+| **Goals achieved** | **Karpathy success criteria verified** | **"It works" without specific checks** |
+| **Scope respected** | **Diff audit passes (diff-discipline)** | **"Only changed what was needed"** |
 
 ## Red Flags - STOP
 
@@ -79,6 +81,21 @@ Skip any step = lying, not verifying
 ```
 ✅ [Run test command] [See: 34/34 pass] "All tests pass"
 ❌ "Should pass now" / "Looks correct"
+```
+
+**Goal Verification (SuperK: Karpathy Rule 4):**
+```
+✅ Success criteria from task spec:
+   - "API returns 200 with user data" → curl test shows 200 + correct JSON
+   - "Invalid email shows error" → test submits empty email, sees error message
+   - "Performance < 100ms" → benchmark shows 47ms
+❌ "It works" / "Looks good" / "Should be fine"
+```
+
+**Diff Scope (SuperK: diff-discipline):**
+```
+✅ git diff --stat shows only files from task spec
+❌ "I only changed what was needed" (without checking diff)
 ```
 
 **Regression tests (TDD Red-Green):**

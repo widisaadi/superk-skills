@@ -22,14 +22,16 @@ Every project goes through this process. A todo list, a single-function utility,
 You MUST create a task for each of these items and complete them in order:
 
 1. **Explore project context** — check files, docs, recent commits
-2. **Offer visual companion** (if topic will involve visual questions) — this is its own message, not combined with a clarifying question. See the Visual Companion section below.
-3. **Ask clarifying questions** — one at a time, understand purpose/constraints/success criteria
-4. **Propose 2-3 approaches** — with trade-offs and your recommendation
-5. **Present design** — in sections scaled to their complexity, get user approval after each section
-6. **Write design doc** — save to `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md` and commit
-7. **Spec self-review** — quick inline check for placeholders, contradictions, ambiguity, scope (see below)
-8. **User reviews written spec** — ask user to review the spec file before proceeding
-9. **Transition to implementation** — invoke writing-plans skill to create implementation plan
+2. **Check past learnings** — read `docs/superk/learnings.md` if it exists for relevant patterns, assumptions, and traps (SuperK: retro-learner integration)
+3. **Offer visual companion** (if topic will involve visual questions) — this is its own message, not combined with a clarifying question. See the Visual Companion section below.
+4. **Ask clarifying questions** — one at a time, understand purpose/constraints/success criteria
+5. **Surface assumptions** — list all assumptions made so far, classify as CERTAIN/LIKELY/UNCERTAIN, resolve UNCERTAIN before proceeding (SuperK: assumption-surfacer integration)
+6. **Propose 2-3 approaches** — with trade-offs and your recommendation. **Option 1 MUST be the simplest viable approach** (SuperK: Karpathy Rule 2 — Simplicity First)
+7. **Present design** — in sections scaled to their complexity, get user approval after each section
+8. **Write design doc** — save to `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md` and commit
+9. **Spec self-review** — quick inline check for placeholders, contradictions, ambiguity, scope (see below)
+10. **User reviews written spec** — ask user to review the spec file before proceeding
+11. **Transition to implementation** — invoke writing-plans skill to create implementation plan
 
 ## Process Flow
 
@@ -77,11 +79,13 @@ digraph brainstorming {
 - Only one question per message - if a topic needs more exploration, break it into multiple questions
 - Focus on understanding: purpose, constraints, success criteria
 
-**Exploring approaches:**
+**Exploring approaches (Karpathy Simplicity Gate):**
 
 - Propose 2-3 different approaches with trade-offs
+- **Option 1 MUST be the minimal viable approach** — the simplest thing that could work, with no speculative features
 - Present options conversationally with your recommendation and reasoning
 - Lead with your recommended option and explain why
+- If the simplest approach works, prefer it. Complexity must justify itself.
 
 **Presenting the design:**
 

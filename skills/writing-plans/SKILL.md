@@ -63,12 +63,17 @@ This structure informs the task decomposition. Each task should produce self-con
 ## Task Structure
 
 ````markdown
-### Task N: [Component Name]
+### Task N: [Component Name] (~estimated lines)
 
 **Files:**
 - Create: `exact/path/to/file.py`
 - Modify: `exact/path/to/existing.py:123-145`
 - Test: `tests/exact/path/to/test.py`
+
+**Assumptions:** (SuperK: assumption-surfacer integration)
+- [Assumption 1] — CERTAIN (verified at `file:line`)
+- [Assumption 2] — LIKELY (based on docs, note in code)
+- ~~[Assumption 3] — UNCERTAIN~~ → Resolved: [resolution]
 
 - [ ] **Step 1: Write the failing test**
 
@@ -117,6 +122,8 @@ Every step must contain the actual content an engineer needs. These are **plan f
 - Exact file paths always
 - Complete code in every step — if a step changes code, show the code
 - Exact commands with expected output
+- **Complexity estimate per task** — `(~N lines)` in task title (SuperK: complexity-guard integration)
+- **Assumptions per task** — list with confidence levels (SuperK: assumption-surfacer integration)
 - DRY, YAGNI, TDD, frequent commits
 
 ## Self-Review

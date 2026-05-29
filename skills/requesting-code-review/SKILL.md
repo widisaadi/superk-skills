@@ -45,6 +45,20 @@ Use Task tool with `general-purpose` type, fill template at `code-reviewer.md`
 - Note Minor issues for later
 - Push back if reviewer is wrong (with reasoning)
 
+## Karpathy Compliance Review (SuperK)
+
+In addition to standard code quality, every review MUST check:
+
+| Dimension | Check | Fail if... |
+|-----------|-------|------------|
+| **Simplicity** | Is there a simpler way to achieve this? | Abstractions with 1 caller, unnecessary generics |
+| **Surgical Scope** | Does every change trace to the task? | Files changed that aren't in the task spec |
+| **Assumption Clarity** | Are assumptions documented? | LIKELY assumptions without code comments |
+| **Goal Verification** | Are success criteria specific and tested? | Vague criteria like "make it work" |
+| **Line Budget** | Actual lines vs estimated? | >2x overrun without justification |
+
+Reviewers should flag Karpathy violations as **Important** severity.
+
 ## Example
 
 ```
@@ -94,6 +108,8 @@ You: [Fix progress indicators]
 - Ignore Critical issues
 - Proceed with unfixed Important issues
 - Argue with valid technical feedback
+- **Skip Karpathy compliance check** (SuperK: it's part of every review)
+- **Accept scope creep without discussion** (SuperK: diff-discipline)
 
 **If reviewer wrong:**
 - Push back with technical reasoning
