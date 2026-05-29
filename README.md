@@ -27,3 +27,11 @@ For example:
 > "Agent, please use **superk** to debug this error."
 
 The agent will automatically utilize the combined superpowers and Karpathy guidelines.
+
+## 📄 License
+
+This project uses the **MIT License**.
+
+It combines open-source work from:
+- [Superpowers](https://github.com/obra/superpowers) (MIT License)
+- [Andrej Karpathy Skills](https://github.com/multica-ai/andrej-karpathy-skills) (MIT License)
