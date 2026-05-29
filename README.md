@@ -16,7 +16,7 @@ I really love these skills, which is why I decided to combine them into one unif
 You can install this skill toolkit directly into your project using `npx` (via degit):
 
 ```bash
-npx degit YOUR_GITHUB_USERNAME/SuperK ./skills
+npx degit widisaadi/superk-skills ./skills
 ```
 
 ## 💡 How to Use
